@@ -117,3 +117,18 @@ text-align: center;
 .lose{
     color: red;
 }
+.choose{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+}
+.choose .character-image img{
+    height: 400px;
+    width: auto;
+    margin: 2px;
+    border: 1px solid white;
+}
+.choose .character-image img:hover {
+cursor: pointer;
+border: 1px solid burlywood;
+}
