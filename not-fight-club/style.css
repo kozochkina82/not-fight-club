@@ -14,6 +14,7 @@ body{
     align-items: center;
     margin: 0 auto;
     padding: 0;
+    font-size: 18px;
 }
 .create {
     background-color: white;
@@ -90,4 +91,29 @@ text-align: center;
 }
 .nav-icon:hover{
     cursor: pointer;
+}
+.character{
+    width: 100%;
+    padding: 20px 50px;
+}
+.character-description{
+    display: flex;
+}
+.character-image img{
+    width: 80%;
+}
+.character-scores{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.character-mame{
+    font-size: 2em;
+}
+.win{
+    color:rgb(63, 246, 63);
+}
+.lose{
+    color: red;
 }
