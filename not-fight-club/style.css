@@ -137,3 +137,14 @@ width: 100%;
 cursor: pointer;
 border: 1px solid burlywood;
 }
+.edit-button{
+    width: 100px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    background-color: lightgray;
+}
+.edit-button:hover{
+    cursor: pointer;
+    background-color: burlywood;
+}
