@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Not-fight-club-game</title>
+    <title>Character Page</title>
   </head>
   <body>
     <header class="header">
@@ -19,10 +19,23 @@
         </div>
       </nav>
     </header>
-    <main>
-      <section class="start">
-        <input type="submit" value="Fight!" class="submit-button" />
-    </main>
-    <script src="script.js"></script>
+    <section class="character">
+      <h1>Your Character</h1>
+      <div class="character-description">
+        <div class="character-image player">
+          <a href="characters.html"
+            ><img
+              src="assets/16a99e9d5e4d32c3dcc8e6d442bfc132.jpg"
+              alt="warrior"
+          /></a>
+        </div>
+        <div class="character-scores">
+        <p class="character-name">Your Character</p>
+        <p class="score">
+          <span class="win">Wins: 0 </span> <span class="lose">Loses: 0</span>
+        </p>
+      </div>
+    </section>
+        <script src="charpage.js"></script>
   </body>
 </html>
