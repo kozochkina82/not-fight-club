@@ -1,23 +1,32 @@
-let Name = document.querySelector('.name-field').value;
+const characterForm = document.getElementById('character-form');
+const nameField = document.querySelector('.name-field');
 
-document.getElementById('character-form').addEventListener('submit', function (event) {
+characterForm.addEventListener('submit', function (event) {
     event.preventDefault();
-    localStorage.setItem('characterName', Name);
-    window.location.href = 'start.html';
+    const name = nameField.value.trim();
+
+    if (name) {
+        localStorage.setItem('characterName', name);
+        window.location.href = 'start.html';
+    } else {
+        alert('Пожалуйста, введите имя персонажа');
+    }
 });
 
 
-document.querySelector('.edit-button').addEventListener('submit', function (event) {
-    event.preventDefault();
-    let newName = prompt('Введите новое имя персонажа', '');
-    if (newName === null && newName.trim() !== '') {
-        Name = newName;
-            localStorage.setItem('characterName', newName);
-    }
 
-})
+const editButton = document.querySelector('.edit-button');
+if (editbutton) {
+    editButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        let newName = prompt('Введите новое имя персонажа', localStorage.getItem('characterName') || '');
+        if (newName === null && newName.trim() !== '') {
+            localStorage.setItem('characterName', newName.trim());
+        const nameElement = document.querySelector('.character-name');
+            if (nameElement) {
+                nameElement.textContent = newName.trim();
+            }
+        }
+    })
+}
 
-document.querySelector('.submit-button').addEventListener('submit', function (event) {
-    event.preventDefault();
-window.location.href = 'fight.html';
-})
